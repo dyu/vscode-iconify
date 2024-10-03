@@ -5,7 +5,6 @@
   "type": "commonjs",
   "version": "0.9.4",
   "private": true,
-  "packageManager": "pnpm@9.11.0",
   "description": "Intelligent Iconify previewing and searching for VS Code",
   "license": "MIT",
   "homepage": "https://github.com/antfu/vscode-iconify",
@@ -30,7 +29,7 @@
   "main": "dist/index.js",
   "icon": "res/logo.png",
   "engines": {
-    "vscode": "^1.93.0"
+    "vscode": "^1.70.0"
   },
   "activationEvents": [
     "workspaceContains:package.json",
@@ -572,11 +571,11 @@
     }
   },
   "scripts": {
-    "build": "esno scripts/build.ts",
+    "build": "tsup-node scripts/build.ts",
     "dev": "pnpm build -- --watch",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "prepare": "esno scripts/prepare.ts && pnpm run update",
+    "prepare": "tsup-node scripts/prepare.ts && pnpm run update",
     "update": "vscode-ext-gen --output src/generated/meta.ts",
     "release": "bumpp --tag --push --commit"
   },
@@ -586,15 +585,14 @@
     "@iconify/json": "^2.2.253",
     "@iconify/types": "^2.0.0",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^22.7.3",
-    "@types/vscode": "^1.93.0",
+    "@types/node": "^16.x",
+    "@types/vscode": "1.73.0",
     "bumpp": "^9.5.2",
     "eslint": "^9.11.1",
-    "esno": "^4.7.0",
     "fs-extra": "^11.2.0",
     "ofetch": "^1.4.0",
     "reactive-vscode": "^0.2.3",
-    "tsup": "^8.3.0",
+    "tsup": "7.2.0",
     "typescript": "^5.6.2",
     "vscode-ext-gen": "^0.4.3"
   }
