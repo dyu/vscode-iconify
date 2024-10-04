@@ -3,7 +3,7 @@
   "name": "iconify",
   "displayName": "Iconify IntelliSense",
   "type": "commonjs",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "private": true,
   "description": "Intelligent Iconify previewing and searching for VS Code",
   "license": "MIT",
@@ -42,6 +42,8 @@
     "onLanguage:svelte",
     "onLanguage:html",
     "onLanguage:django-html",
+    "onLanguage:markdown",
+    "onLanguage:mdx",
     "onLanguage:css"
   ],
   "contributes": {
@@ -150,6 +152,8 @@
             "svelte",
             "html",
             "pug",
+            "markdown",
+            "mdx",
             "json",
             "yaml"
           ],
